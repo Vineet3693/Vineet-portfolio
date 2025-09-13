@@ -1,0 +1,1579 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Vineet Yadav - Data Scientist & AI/ML Engineer Portfolio</title>
+    <meta name="description" content="Vineet Yadav - Professional Data Scientist and AI/ML Engineer. Explore my projects, skills, and experience in data science and artificial intelligence.">
+    <meta name="keywords" content="Data Scientist, AI Engineer, Machine Learning, Python, Data Analysis, Vineet Yadav">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Vineet Yadav - Data Scientist & AI/ML Engineer">
+    <meta property="og:description" content="Professional Data Scientist showcasing innovative AI/ML projects and expertise">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vineetyadav.dev">
+    
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+</head>
+
+<body>
+    <!-- ================================ -->
+    <!-- LOADING SCREEN SECTION -->
+    <!-- ================================ -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="data-visualization">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
+                    <div class="bar bar-4"></div>
+                    <div class="bar bar-5"></div>
+                </div>
+                <h2 class="loading-text">VINEET YADAV</h2>
+                <p class="loading-subtitle">Loading Portfolio...</p>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================ -->
+    <!-- CUSTOM CURSOR & EFFECTS -->
+    <!-- ================================ -->
+    <div class="cursor-container">
+        <div class="cursor" id="cursor"></div>
+        <div class="cursor-follower" id="cursorFollower"></div>
+    </div>
+
+    <!-- AI Robot Following Cursor -->
+    <div class="ai-robot" id="aiRobot">
+        <div class="robot-body">
+            <div class="robot-head">
+                <div class="robot-eye left"></div>
+                <div class="robot-eye right"></div>
+                <div class="robot-mouth"></div>
+            </div>
+            <div class="robot-antenna">
+                <div class="antenna-tip"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle System Background -->
+    <div id="particles-container" class="particles-container"></div>
+
+    <!-- ================================ -->
+    <!-- HEADER NAVIGATION -->
+    <!-- ================================ -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-container">
+            <!-- Logo/Brand -->
+            <div class="logo">
+                <span class="logo-text">VY</span>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navbar">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link active" data-section="hero">
+                        <i class="fas fa-home"></i> Home
+                    </a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">
+                        <i class="fas fa-user"></i> About
+                    </a></li>
+                    <li><a href="#education" class="nav-link" data-section="education">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </a></li>
+                    <li><a href="#experience" class="nav-link" data-section="experience">
+                        <i class="fas fa-briefcase"></i> Experience
+                    </a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">
+                        <i class="fas fa-code"></i> Projects
+                    </a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">
+                        <i class="fas fa-cogs"></i> Skills
+                    </a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a></li>
+                </ul>
+            </nav>
+
+            <!-- Theme Toggle & Controls -->
+            <div class="header-controls">
+                <!-- Dark/Light Mode Toggle -->
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                
+                <!-- Sound Toggle -->
+                <button class="sound-toggle" id="soundToggle" title="Toggle Sound">
+                    <i class="fas fa-volume-up" id="soundIcon"></i>
+                </button>
+
+                <!-- Resume Download -->
+                <a href="assets/resume/Vineet_Yadav_Resume.pdf" class="resume-btn" download>
+                    <i class="fas fa-download"></i> Resume
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-header">
+                <a href="https://linkedin.com/in/vineet-yadav" class="social-icon" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/vineet-yadav" class="social-icon" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/vineet_yadav" class="social-icon" target="_blank" rel="noopener">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/vineet_yadav" class="social-icon" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/vineet-yadav" class="social-icon" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://facebook.com/vineet.yadav" class="social-icon" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================ -->
+    <!-- MAIN CONTENT CONTAINER -->
+    <!-- ================================ -->
+    <main class="main-content" id="mainContent">
+
+        <!-- ================================ -->
+        <!-- HERO SECTION -->
+        <!-- ================================ -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <!-- Profile Picture Upload Section -->
+                <div class="profile-picture-section">
+                    <div class="profile-picture-container">
+                        <img src="assets/images/default-profile.jpg" alt="Vineet Yadav" class="profile-picture" id="profilePicture">
+                        <div class="picture-upload-overlay">
+                            <input type="file" id="pictureUpload" accept="image/*" hidden>
+                            <label for="pictureUpload" class="upload-btn">
+                                <i class="fas fa-camera"></i>
+                                <span>Update Photo</span>
+                            </label>
+                        </div>
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <!-- Welcome Message -->
+                    <div class="welcome-message" id="welcomeMessage">
+                        <span class="welcome-text">Welcome to my profile</span>
+                    </div>
+
+                    <!-- Name Display -->
+                    <h1 class="hero-name" id="heroName">
+                        <span class="name-letter">V</span>
+                        <span class="name-letter">I</span>
+                        <span class="name-letter">N</span>
+                        <span class="name-letter">E</span>
+                        <span class="name-letter">E</span>
+                        <span class="name-letter">T</span>
+                        <span class="name-space"></span>
+                        <span class="name-letter">Y</span>
+                        <span class="name-letter">A</span>
+                        <span class="name-letter">D</span>
+                        <span class="name-letter">A</span>
+                        <span class="name-letter">V</span>
+                    </h1>
+
+                    <!-- Typing Animation for Tagline -->
+                    <div class="hero-tagline">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+
+                    <!-- Hero Buttons -->
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <!-- Scroll Indicator -->
+                    <div class="scroll-indicator">
+                        <div class="scroll-mouse">
+                            <div class="scroll-wheel"></div>
+                        </div>
+                        <span class="scroll-text">Scroll to explore</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Background Elements -->
+            <div class="hero-background">
+                <div class="floating-elements">
+                    <div class="floating-element" data-speed="2">💻</div>
+                    <div class="floating-element" data-speed="3">🤖</div>
+                    <div class="floating-element" data-speed="1">📊</div>
+                    <div class="floating-element" data-speed="4">🧠</div>
+                    <div class="floating-element" data-speed="2">⚡</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ -->
+        <!-- ABOUT SECTION -->
+        <!-- ================================ -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <h3 class="about-subtitle">Passionate Engineering Professional & Data Science Enthusiast</h3>
+                            <p class="about-description">
+                                As an engineering graduate with a deep passion for <span class="highlight">Data Science and Artificial Intelligence</span>, 
+                                I am dedicated to leveraging cutting-edge technologies to solve real-world problems. My journey in the tech industry 
+                                has been driven by curiosity and a commitment to continuous learning.
+                            </p>
+                        </div>
+
+                        <div class="about-details">
+                            <p>
+                                With hands-on experience in <span class="highlight">machine learning, data analysis, and AI model development</span>, 
+                                I specialize in extracting meaningful insights from complex datasets and building intelligent systems. My engineering 
+                                background provides me with a strong analytical foundation, while my passion for innovation keeps me at the forefront 
+                                of emerging technologies in the AI/ML landscape.
+                            </p>
+                            
+                            <p>
+                                I thrive on challenges that require creative problem-solving and enjoy collaborating on projects that have a meaningful impact. 
+                                Whether it's developing predictive models, creating intelligent chatbots, or analyzing customer behavior patterns, 
+                                I bring both <span class="highlight">technical expertise and strategic thinking</span> to every project.
+                            </p>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="50">0</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="2">0</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="15">0</span>
+                                <span class="stat-label">Technologies Mastered</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Visual Elements -->
+                    <div class="about-visual">
+                        <div class="about-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>AI & Machine Learning</h4>
+                                <p>Developing intelligent systems that learn and adapt</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4>Data Analysis</h4>
+                                <p>Transforming raw data into actionable insights</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4>Software Development</h4>
+                                <p>Building robust solutions with clean, efficient code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ -->
+        <!-- EDUCATION SECTION -->
+        <!-- ================================ -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="education-content">
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2019 - 2023</div>
+                                <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
+                                <p class="timeline-institution">Engineering Graduate</p>
+                                <p class="timeline-description">
+                                    Specialized in foundational engineering principles with focus on emerging technologies. 
+                                    Developed strong analytical and problem-solving skills that form the backbone of my 
+                                    data science expertise.
+                                </p>
+                                
+                                <!-- Achievement Badges -->
+                                <div class="achievement-badges">
+                                    <span class="badge">Academic Excellence</span>
+                                    <span class="badge">Technical Innovation</span>
+                                    <span class="badge">Research Projects</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Education/Certifications -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2023 - Present</div>
+                                <h3 class="timeline-title">Data Science Certifications</h3>
+                                <p class="timeline-institution">Various Platforms</p>
+                                <p class="timeline-description">
+                                    Continuous learning through specialized courses in Machine Learning, 
+                                    Deep Learning, and AI applications from leading educational platforms.
+                                </p>
+                                
+                                <div class="certification-list">
+                                    <div class="cert-item">
+                                        <i class="fas fa-python"></i>
+                                        <span>Python for Data Science</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fas fa-robot"></i>
+                                        <span>Machine Learning Specialization</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fas fa-brain"></i>
+                                        <span>AI & Deep Learning</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Visual -->
+                    <div class="education-visual">
+                        <div class="knowledge-tree">
+                            <div class="tree-node root">
+                                <span>B.Tech Engineering</span>
+                            </div>
+                            <div class="tree-branches">
+                                <div class="branch">
+                                    <div class="tree-node">Data Science</div>
+                                </div>
+                                <div class="branch">
+                                    <div class="tree-node">AI/ML</div>
+                                </div>
+                                <div class="branch">
+                                    <div class="tree-node">Analytics</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ -->
+        <!-- WORK EXPERIENCE SECTION -->
+        <!-- ================================ -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="experience-content">
+                    <div class="experience-timeline">
+                        
+                        <!-- AgenixAI Experience -->
+                        <div class="experience-item" data-animate="slide-right">
+                            <div class="experience-card">
+                                <div class="company-logo">
+                                    <div class="logo-placeholder">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-details">
+                                    <div class="experience-header">
+                                        <h3 class="job-title">Data Scientist Intern</h3>
+                                        <div class="company-name">AgenixAI</div>
+                                        <div class="job-duration">2023 - Present</div>
+                                    </div>
+                                    
+                                    <div class="job-description">
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Developed and implemented machine learning models for various AI applications
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Collaborated with cross-functional teams to design intelligent solutions
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Gained expertise in advanced AI technologies and model optimization
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Contributed to multiple data-driven projects enhancing business intelligence
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="job-technologies">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">TensorFlow</span>
+                                        <span class="tech-tag">PyTorch</span>
+                                        <span class="tech-tag">Scikit-learn</span>
+                                        <span class="tech-tag">Data Analysis</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Zidio Development Experience -->
+                        <div class="experience-item" data-animate="slide-left">
+                            <div class="experience-card">
+                                <div class="company-logo">
+                                    <div class="logo-placeholder">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-details">
+                                    <div class="experience-header">
+                                        <h3 class="job-title">Data Science Trainee</h3>
+                                        <div class="company-name">Zidio Development Company</div>
+                                        <div class="job-duration">2023</div>
+                                    </div>
+                                    
+                                    <div class="job-description">
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Comprehensive training in data science methodologies and best practices
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Hands-on experience with real-world data analysis projects
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Learned industry-standard tools and techniques for data processing
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Developed foundational skills in machine learning and statistical analysis
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="job-technologies">
+                                        <span class="tech-tag">Pandas</span>
+                                        <span class="tech-tag">NumPy</span>
+                                        <span class="tech-tag">Matplotlib</span>
+                                        <span class="tech-tag">Seaborn</span>
+                                        <span class="tech-tag">Jupyter</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ -->
+        <!-- PROJECTS SECTION -->
+        <!-- ================================ -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                    <p class="section-description">Explore my latest work in data science and AI/ML</p>
+                </div>
+
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
+                    <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                    <button class="filter-btn" data-filter="ai">Artificial Intelligence</button>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- Weather Data Analysis Project -->
+                    <div class="project-card" data-category="data-analysis">
+                        <div class="project-image">
+                            <img src="assets/images/projects/weather-analysis.jpg" alt="Weather Data Analysis">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="project-btn" data-project="weather">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </a>
+                                    <a href="https://github.com/vineet-yadav/weather-analysis" class="project-btn" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                    <a href="#" class="project-btn">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-category">Data Analysis</div>
+                            <h3 class="project-title">Weather Data Analysis</h3>
+                            <p class="project-description">
+                                Comprehensive analysis of meteorological data to identify patterns, trends, and 
+                                predictive insights for weather forecasting applications using advanced statistical methods.
+                            </p>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Matplotlib</span>
+                                <span class="tech-badge">Seaborn</span>
+                            </div>
+                            
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <i class="fas fa-database"></i>
+                                    <span>10K+ Records</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>95% Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vrinda Shop Data Analysis Project -->
+                    <div class="project-card" data-category="data-analysis">
+                        <div class="project-image">
+                            <img src="assets/images/projects/vrinda-shop.jpg" alt="Vrinda Shop Analysis">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="project-btn" data-project="vrinda">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </a>
+                                    <a href="https://github.com/vineet-yadav/vrinda-shop-analysis" class="project-btn" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                    <a href="#" class="project-btn">
+                                        <i class="fas fa-external-link-alt"></i> Dashboard
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-category">Business Analytics</div>
+                            <h3 class="project-title">Vrinda Shop Data Analysis</h3>
+                            <p class="project-description">
+                                End-to-end analysis of retail sales data to optimize inventory management, 
+                                customer segmentation, and sales performance metrics for enhanced business decisions.
+                            </p>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-badge">Excel</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Power BI</span>
+                                <span class="tech-badge">SQL</span>
+                            </div>
+                            
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>50K+ Sales</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-percentage"></i>
+                                    <span>30% Revenue ↑</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI-Powered Image Recognition System -->
+                    <div class="project-card fade-in" data-categories="machine-learning,computer-vision" data-project-id="ai-image-recognition">
+                       <div class="project-image">
+                         <img src="assets/images/projects/ai-image-recognition.jpg" alt="AI Image Recognition System" loading="lazy">
+                         <div class="project-overlay">
+                           <div class="project-badge">Featured</div>
+                           <div class="project-actions">
+                             <button class="project-btn primary" data-action="view-details">
+                               <i class="fas fa-search-plus"></i>
+                               <span>View Details</span>
+                             </button><a href="https://github.com/vineet-yadav/ai-image-recognition" class="project-btn secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i>
+                               <span>Source Code</span>
+                             </a><a href="https://ai-image-recognition-demo.streamlit.app" class="project-btn accent" target="_blank" rel="noopener"><i class="fas fa-rocket"></i>
+                               <span>Live Demo</span></a>
+                           </div>
+                         </div>
+                         <div class="project-tech-preview"><img src="assets/icons/tensorflow.svg" alt="TensorFlow" title="TensorFlow">
+                           <img src="assets/icons/opencv.svg" alt="OpenCV" title="OpenCV">
+                           <img src="assets/icons/python.svg" alt="Python" title="Python">
+                         </div>
+                       </div>
+                    
+                    <!-- Customer Segmentation Project -->
+                    <div class="project-card" data-category="machine-learning">
+                        <div class="project-image">
+                            <img src="assets/images/projects/customer-segmentation.jpg" alt="Customer Segmentation">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="project-btn" data-project="customer-segmentation">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </a>
+                                    <a href="https://github.com/vineet-yadav/customer-segmentation" class="project-btn" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                    <a href="#" class="project-btn">
+                                        <i class="fas fa-chart-pie"></i> Dashboard
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-category">Unsupervised Learning</div>
+                            <h3 class="project-title">Customer Data Segmentation</h3>
+                            <p class="project-description">
+                                Implemented unsupervised learning algorithms to identify distinct customer segments 
+                                and behavioral patterns for targeted marketing strategies and business optimization.
+                            </p>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-badge">K-Means</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Plotly</span>
+                            </div>
+                            
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>25K+ Customers</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span>5 Segments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Chatbot Project -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-image">
+                            <img src="assets/images/projects/ai-chatbot.jpg" alt="AI Chatbot">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="project-btn" data-project="chatbot">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </a>
+                                    <a href="https://github.com/vineet-yadav/groq-chatbot" class="project-btn" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                    <a href="#" class="project-btn">
+                                        <i class="fas fa-comments"></i> Chat Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-category">Natural Language Processing</div>
+                            <h3 class="project-title">AI Chatbot using Groq</h3>
+                            <p class="project-description">
+                                Built an intelligent conversational agent leveraging Groq AI technology for enhanced 
+                                natural language processing and response generation with context awareness.
+                            </p>
+                            
+                            <div class="project-technologies">
+                                <span class="tech-badge">Groq AI</span>
+                                <span class="tech-badge">NLP</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">React</span>
+                            </div>
+                            
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>0.5s Response</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-brain"></i>
+                                    <span>95% Context</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ -->
+        <!-- SKILLS SECTION -->
+        <!-- ================================ -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-line"></div>
+                    <p class="section-description">My technical expertise and proficiency levels</p>
+                </div>
+
+                <div class="skills-content">
+                    <div class="skills-categories">
+                        
+                        <!-- Programming & Development Skills -->
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 class="category-title">Programming & Development</h3>
+                            </div>
+                            
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Python</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">NumPy</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Pandas</span>
+                                        <span class="skill-percentage">88%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="88"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Matplotlib</span>
+                                        <span class="skill-percentage">82%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="82"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Science & ML Skills -->
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3 class="category-title">Data Science & Machine Learning</h3>
+                            </div>
+                            
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Machine Learning Models</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Statistical Analysis</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="80"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Data Visualization</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Deep Learning</span>
+                                        <span class="skill-percentage">75%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="75"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tools & Development Environment -->
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3 class="category-title">Development Tools</h3>
+                            </div>
+                            
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">VS Code</span>
+                                        <span class="skill-percentage">95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="95"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Jupyter Notebook</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Git & GitHub</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Productivity & Office Tools -->
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <h3 class="category-title">Productivity Tools</h3>
+                            </div>
+                            
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">MS Excel</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">MS Word</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">MS PowerPoint</span>
+                                        <span class="skill-percentage">88%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="88"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Platforms & Tools Cloud -->
+                    <div class="ai-platforms-section">
+                        <h3 class="platforms-title">AI Platforms & Tools</h3>
+                        <div class="platforms-cloud">
+                            <div class="platform-item" data-size="large">
+                                <i class="fab fa-openai"></i>
+                                <span>ChatGPT</span>
+                            </div>
+                            <div class="platform-item" data-size="medium">
+                                <i class="fas fa-robot"></i>
+                                <span>Claude</span>
+                            </div>
+                            <div class="platform-item" data-size="large">
+                                <i class="fab fa-google"></i>
+                                <span>Gemini</span>
+                            </div>
+                            <div class="platform-item" data-size="medium">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Copilot</span>
+                            </div>
+                            <div class="platform-item" data-size="small">
+                                <i class="fas fa-brain"></i>
+                                <span>DeepSeek</span>
+                            </div>
+                            <div class="platform-item" data-size="small">
+                                <i class="fas fa-brain"></i>
+                                <span>DeepSeek</span>
+                            </div>
+                            <div class="platform-item" data-size="small">
+                                <i class="fas fa-star"></i>
+                                <span>Outlier AI</span>
+                            </div>
+                            <div class="platform-item" data-size="small">
+                                <i class="fas fa-soul"></i>
+                                <span>Soul AI</span>
+                            </div>
+                            <div class="platform-item" data-size="medium">
+                                <i class="fas fa-play"></i>
+                                <span>AI Playgrounds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ -->
+        <!-- CONTACT SECTION -->
+        <!-- ================================ -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">06</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-line"></div>
+                    <p class="section-description">Ready to collaborate on exciting data science and AI projects</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-intro">
+                            <h3 class="contact-subtitle">Let's Connect!</h3>
+                            <p class="contact-description">
+                                I'm always open to discussing new opportunities, collaborating on innovative projects, 
+                                or simply connecting with fellow data science enthusiasts. Feel free to reach out 
+                                through any of these channels.
+                            </p>
+                        </div>
+
+                        <!-- Direct Contact Information -->
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:vineet.yadav@email.com" class="contact-value">
+                                        vineet.yadav@email.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Phone</span>
+                                    <a href="tel:+919876543210" class="contact-value">
+                                        +91 98765 43210
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">India</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Response Time</span>
+                                    <span class="contact-value">Within 24 hours</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="social-links">
+                            <h4 class="social-title">Connect on Social Media</h4>
+                            <div class="social-grid">
+                                <a href="https://linkedin.com/in/vineet-yadav" class="social-link linkedin" target="_blank">
+                                    <div class="social-icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-name">LinkedIn</span>
+                                        <span class="social-desc">Professional networking</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://github.com/vineet-yadav" class="social-link github" target="_blank">
+                                    <div class="social-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-name">GitHub</span>
+                                        <span class="social-desc">Code repositories</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://twitter.com/vineet_yadav" class="social-link twitter" target="_blank">
+                                    <div class="social-icon">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-name">Twitter (X)</span>
+                                        <span class="social-desc">Tech insights & discussions</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://instagram.com/vineet_yadav" class="social-link instagram" target="_blank">
+                                    <div class="social-icon">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-name">Instagram</span>
+                                        <span class="social-desc">Behind the scenes</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://youtube.com/vineet-yadav" class="social-link youtube" target="_blank">
+                                    <div class="social-icon">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-name">YouTube</span>
+                                        <span class="social-desc">Technical tutorials</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://facebook.com/vineet.yadav" class="social-link facebook" target="_blank">
+                                    <div class="social-icon">
+                                        <i class="fab fa-facebook"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <span class="social-name">Facebook</span>
+                                        <span class="social-desc">Community updates</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form with Google Forms Integration -->
+                    <div class="contact-form-section">
+                        <div class="form-container">
+                            <h3 class="form-title">Send me a message</h3>
+                            <p class="form-description">
+                                Have a project in mind or want to collaborate? Drop me a message and I'll get back to you soon!
+                            </p>
+
+                            <form id="contactForm" class="contact-form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" id="fullName" name="fullName" required>
+                                        <label for="fullName">Full Name *</label>
+                                        <div class="input-highlight"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="email" id="email" name="email" required>
+                                        <label for="email">Email Address *</label>
+                                        <div class="input-highlight"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" id="subject" name="subject" required>
+                                        <label for="subject">Subject *</label>
+                                        <div class="input-highlight"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="select-group">
+                                        <select id="projectType" name="projectType" required>
+                                            <option value="">Select Project Interest</option>
+                                            <option value="data-analysis">Data Analysis</option>
+                                            <option value="machine-learning">Machine Learning</option>
+                                            <option value="ai-development">AI Development</option>
+                                            <option value="consultation">Consultation</option>
+                                            <option value="collaboration">Collaboration</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <label for="projectType">Project Type</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="textarea-group">
+                                        <textarea id="message" name="message" rows="5" required></textarea>
+                                        <label for="message">Your Message *</label>
+                                        <div class="input-highlight"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="submit-btn" id="submitBtn">
+                                        <span class="btn-text">Send Message</span>
+                                        <div class="btn-loading">
+                                            <div class="loading-spinner"></div>
+                                            <span>Sending...</span>
+                                        </div>
+                                        <i class="fas fa-paper-plane btn-icon"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Form Status Messages -->
+                                <div class="form-status" id="formStatus">
+                                    <div class="success-message">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Message sent successfully! I'll get back to you soon.</span>
+                                    </div>
+                                    <div class="error-message">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <span>Something went wrong. Please try again or contact me directly.</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Alternative Contact Methods -->
+                        <div class="alternative-contact">
+                            <div class="divider">
+                                <span>or</span>
+                            </div>
+                            
+                            <div class="quick-actions">
+                                <a href="mailto:vineet.yadav@email.com?subject=Portfolio%20Inquiry" class="quick-action">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Direct Email</span>
+                                </a>
+                                
+                                <a href="https://wa.me/919876543210" class="quick-action" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                                
+                                <a href="assets/resume/Vineet_Yadav_Resume.pdf" class="quick-action" download>
+                                    <i class="fas fa-download"></i>
+                                    <span>Download CV</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ -->
+        <!-- BLOG SECTION -->
+        <!-- ================================ -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">07</span>
+                    <h2 class="section-title">Latest Blog Posts</h2>
+                    <div class="section-line"></div>
+                    <p class="section-description">Technical articles and insights from my data science journey</p>
+                </div>
+
+                <div class="blog-content">
+                    <div class="blog-grid">
+                        
+                        <!-- Blog Post 1 -->
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog/machine-learning-trends.jpg" alt="ML Trends 2024">
+                                <div class="blog-category">Machine Learning</div>
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-meta">
+                                    <span class="blog-date">
+                                        <i class="fas fa-calendar"></i> March 15, 2024
+                                    </span>
+                                    <span class="blog-read-time">
+                                        <i class="fas fa-clock"></i> 5 min read
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="#" class="blog-link">
+                                        Top Machine Learning Trends to Watch in 2024
+                                    </a>
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Explore the latest developments in machine learning and AI that are shaping 
+                                    the future of data science and technology innovation...
+                                </p>
+                                <div class="blog-footer">
+                                    <div class="blog-tags">
+                                        <span class="tag">ML</span>
+                                        <span class="tag">AI</span>
+                                        <span class="tag">Trends</span>
+                                    </div>
+                                    <a href="#" class="read-more">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 2 -->
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog/data-visualization.jpg" alt="Data Visualization">
+                                <div class="blog-category">Data Visualization</div>
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-meta">
+                                    <span class="blog-date">
+                                        <i class="fas fa-calendar"></i> March 10, 2024
+                                    </span>
+                                    <span class="blog-read-time">
+                                        <i class="fas fa-clock"></i> 7 min read
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="#" class="blog-link">
+                                        Creating Compelling Data Visualizations with Python
+                                    </a>
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Learn advanced techniques for creating beautiful and informative data 
+                                    visualizations using Matplotlib, Seaborn, and Plotly...
+                                </p>
+                                <div class="blog-footer">
+                                    <div class="blog-tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">Visualization</span>
+                                        <span class="tag">Tutorial</span>
+                                    </div>
+                                    <a href="#" class="read-more">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 3 -->
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog/ai-ethics.jpg" alt="AI Ethics">
+                                <div class="blog-category">AI Ethics</div>
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-meta">
+                                    <span class="blog-date">
+                                        <i class="fas fa-calendar"></i> March 5, 2024
+                                    </span>
+                                    <span class="blog-read-time">
+                                        <i class="fas fa-clock"></i> 6 min read
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="#" class="blog-link">
+                                        The Importance of Ethics in AI Development
+                                    </a>
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Discussing the critical role of ethical considerations in AI development 
+                                    and how data scientists can build responsible AI systems...
+                                </p>
+                                <div class="blog-footer">
+                                    <div class="blog-tags">
+                                        <span class="tag">Ethics</span>
+                                        <span class="tag">AI</span>
+                                        <span class="tag">Responsibility</span>
+                                    </div>
+                                    <a href="#" class="read-more">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- View All Posts Button -->
+                    <div class="blog-cta">
+                        <a href="#" class="btn btn-outline">
+                            <span>View All Posts</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================================ -->
+    <!-- FOOTER SECTION -->
+    <!-- ================================ -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">VINEET YADAV</span>
+                    </div>
+                    <p class="footer-description">
+                        Data Scientist & AI/ML Engineer passionate about transforming data into intelligent solutions
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/vineet-yadav" class="footer-social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/vineet-yadav" class="footer-social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/vineet_yadav" class="footer-social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:vineet.yadav@email.com" class="footer-social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-services">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-menu">
+                        <li>Data Analysis</li>
+                        <li>Machine Learning</li>
+                        <li>AI Development</li>
+                        <li>Data Visualization</li>
+                        <li>Consulting</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h4 class="footer-title">Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:vineet.yadav@email.com">vineet.yadav@email.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>India</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Vineet Yadav. All rights reserved.</p>
+                </div>
+                <div class="footer-credits">
+                    <p>Built with ❤️ and lots of ☕</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================ -->
+    <!-- BACK TO TOP BUTTON -->
+    <!-- ================================ -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ================================ -->
+    <!-- PROJECT MODAL -->
+    <!-- ================================ -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Project Details</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================ -->
+    <!-- JAVASCRIPT FILES -->
+    <!-- ================================ -->
+    <!-- Particles.js for background effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- EmailJS for form handling -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <!-- Main JavaScript files -->
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- ================================ -->
+    <!-- INITIALIZATION SCRIPT -->
+    <!-- ================================ -->
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with actual EmailJS user ID
+        })();
+
+        // Initialize the website when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all components
+            initializeWebsite();
+        });
+
+        // Main initialization function
+        function initializeWebsite() {
+            console.log('🚀 Initializing Vineet Yadav Portfolio Website...');
+            
+            // Start loading sequence
+            startLoadingSequence();
+            
+            // Initialize particles
+            initParticles();
+            
+            // Initialize animations
+            initAnimations();
+            
+            // Initialize interactions
+            initInteractions();
+            
+            console.log('✅ Website initialization complete!');
+        }
+    </script>
+</body>
+</html>
